@@ -1,8 +1,13 @@
-kind: pipeline
-type: docker
-name: default
+#kind: pipeline
+#type: docker
+#name: default
 
-steps:
-- name: foo
-  image: hello-world
+#steps:
+#- name: foo
+#  image: hello-world
   
+pipeline:
+  backend:
+    image: golang:1.10
+    commands:
+      - echo "drone server in aws."
